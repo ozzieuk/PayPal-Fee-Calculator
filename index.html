@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PayPal Fee Calculator</title>
+
+    <meta name="description" content="Calculate PayPal fees easily with PayPal Fee Calc from Ion Digital">
+    <meta name="author" content="Wayne Austin - Ion Digital ">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+       padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      } 
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10828846-14']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "ur-8de7ea91-a1bb-bc0-8950-273c74abb77c"});</script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="index.html">PayPal Fee Calculator</a>
+          <p class="navbar-text pull-right">
+		              Made with &#x2764; by <a href="http://www.iondigital.co.uk" class="navbar-link">Ion Digital </a>
+		            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+	
+	   
+	    <h1>Work out PayPal fees in a snap!</h1>
+	    <p>Okay so you want to know how much cash you need to add on to cover your PayPal Fees? Good, You're at the right place! Just select your country or manually put in the flat fee amount and the percentage PayPal charge in your country, and fill in either the amount you want to receive or how much a buyer is going to send, our nifty free tool will give you the digits you need. <p><strong>Found this tool useful? Good, head down the bottom of the page and share it with your chums on Facebook and Twitter!</strong> </p>
+	   
+	   
+
+    
+    <form id="ppc" action="" method="post">
+    
+    
+    <div class="alert alert-info"><strong>Heads Up!</strong> More PayPal rates for other countries coming real soon, hold tight whilst we add them! Want to see your country sooner? <strong><a href ="http://www.iondigital.co.uk/make-contact">Get in touch and let us know!</a></strong></div>
+    
+    <div class ="well well-large">
+    
+    
+    <div class="row">
+<div class="span6"> <legend>Select your country to prefill basic PayPal fees</legend> 
+        	<img id="flag_united_kingdom" src="images/united_kingdom.png" width="56" height="56" alt="UK" title="United Kingdom" onclick="set_rate('3.4','0.20','&pound;','GBP');rp_calc();p_calc()" />
+			<img id="flag_europe" src="images/europe.png" width="56" height="56" alt="Europe" title="Europe" onclick="set_rate('3.4','0.35','&euro;','EUR');rp_calc();p_calc()" />
+			<img id="flag_france" src="images/france.png" width="56" height="56" alt="France" title="France" onclick="set_rate('3.4','0.25','&euro;','EUR');rp_calc();p_calc()" />
+			<img id="flag_germany" src="images/germany.png" width="56" height="56" alt="Germany" title="Germany" onclick="set_rate('1.9','0.35','&euro;','EUR');rp_calc();p_calc()" />
+			<img id="flag_australia" src="images/australia.png" width="56" height="56" alt="Australia" title="Australia" onclick="set_rate('2.4','0.30','$','AUD');rp_calc();p_calc()" />
+			<img id="flag_new_zealand" src="images/new_zealand.png" width="56" height="56" alt="New Zealand" title="New Zealand" onclick="set_rate('3.4','0.45','$','NZD');rp_calc();p_calc()" />
+			<img id="flag_czech_republic" src="images/czech_republic.png" width="56" height="56" alt="Czech Republic" title="Czech Republic" onclick="set_rate('3.4','10','Kč','CZK');rp_calc();p_calc()" />
+			<img id="flag_hungary" src="images/hungary.png" width="56" height="56" alt="Hungary" title="Hungary" onclick="set_rate('3.4','90','Ft','HUF');rp_calc();p_calc()" />
+			<img id="flag_poland" src="images/poland.png" width="56" height="56" alt="Poland" title="Poland" onclick="set_rate('3.4','1.35','zł','PLN');rp_calc();p_calc()" />
+			<img id="flag_denmark" src="images/denmark.png" width="56" height="56" alt="Denmark" title="Denmark" onclick="set_rate('3.9','2.60','kr','DKK');rp_calc();p_calc()" />
+			<img id="flag_norway" src="images/norway.png" width="56" height="56" alt="Norway" title="Norway" onclick="set_rate('3.9','2.80','kr','NOK');rp_calc();p_calc()" />
+			<img id="flag_sweden" src="images/sweden.png" width="56" height="56" alt="Sweden" title="Sweden" onclick="set_rate('3.9','3.25','kr','SEK');rp_calc();p_calc()" />
+			<img id="flag_switzerland" src="images/switzerland.png" width="56" height="56" alt="Switzerland" title="Switzerland" onclick="set_rate('3.4','0.55','Fr','CHF');rp_calc();p_calc()" />
+			<img id="flag_singapore" src="images/singapore.png" width="56" height="56" alt="Singapore" title="Singapore" onclick="set_rate('3.4','0.50','$','SGD');rp_calc();p_calc()" />
+			<img id="flag_hong_kong" src="images/hong_kong.png" width="56" height="56" alt="Hong Kong" title="Hong Kong" onclick="set_rate('3.4','2.35','$','HKD');rp_calc();p_calc()" />
+			<img id="flag_japan" src="images/japan.png" width="56" height="56" alt="Japan" title="Japan" onclick="set_rate('3.9','40','&yen;','JPY');rp_calc();p_calc()" />
+			<img id="flag_canada" src="images/canada.png" width="56" height="56" alt="Canada" title="Canada" onclick="set_rate('2.9','0.30','$','CAD');rp_calc();p_calc()" />
+			<img id="flag_united_states" src="images/united_states.png" width="56" height="56" alt="US" title="United States" onclick="set_rate('2.9','0.30','$','USD');rp_calc();p_calc()" /></div>
+<div class="span5">     
+            <legend>Or enter the fee rates</legend>	
+        <label>Fee Percentage</label>
+	<div class="input-append">
+<input class="input-xlarge" type="text" name="paypal_fee_percent" id="paypal_fee_percent"  value="3.4" onkeyup="p_calc();rp_calc(1);"  ><span class="add-on">%</span>
+</div>
+			
+            
+            
+            
+<label>PayPal Fixed Fee Amount</label>
+    <div class="input-prepend input-append">
+    
+   			 <span id="currency_sign" class="add-on">&pound;</span><input class="input-xlarge" name="paypal_fee_fixed" id="paypal_fee_fixed"  value="0.20" onkeyup="p_calc();rp_calc(1);" type="text"><span id="currency_name" class="add-on">GBP</span>
+    </div></div>
+</div>
+    
+    
+       
+            
+            
+       
+            
+        
+        </div>
+		
+    
+    
+    
+
+		
+		
+		
+        
+       
+        
+        
+			
+		 <div class="row">
+		 <div class="span6">
+       
+        <div class="well" style="height: 200px">
+        
+        
+				<legend>Reverse PayPal Fee Calculator</legend>
+					
+						<label>For you to receive:</label>
+						 <div class="input-prepend"><span id="currency_symbol_1" class="add-on">&pound;</span><input type="text" name="to_receive" id="to_receive" size="20" placeholder="Enter a Value e.g 10.99"></div>
+						
+                        <label>A buyer would have to pay:</label>
+						
+                        <div class="input-prepend"><span id="currency_symbol_2" class="add-on">&pound;</span><input class="uneditable-input" type="text" name="a_person_would" id="a_person_would" size="20" disabled></div>
+                        
+                     
+                      
+		</div>     </div>
+   
+         <div class="span6">
+        <div class="well" style="height: 200px">
+      
+         
+         
+         
+         
+        
+			
+				<legend>PayPal Fee Calculator</legend>
+					
+					
+						<label>If a buyer sends:</label>
+						 <div class="input-prepend"><span id="currency_symbol_3" class="add-on">&pound;</span><input type="text" name="if_you_receive" id="if_you_receive" size="6" placeholder="Enter a Value e.g 10.99"></div>
+					
+					<div class="pull-left">
+						<label for="paypal_fees">PayPal will charge:</label>
+                  
+                        <div class="input-prepend"><span id="currency_symbol_4" class="add-on">&pound;</span><input class="uneditable-input"  type="text" name="paypal_fees" id="paypal_fees" size="6" disabled></div>
+                        </div>
+						
+					<div class="pull-right">
+						<label>You would receive:</label>
+                        <div class="input-prepend "><span id="currency_symbol_5" class="add-on">&pound;</span><input class="uneditable-input" type="text" name="you_would_receive" id="you_would_receive" size="6"  disabled></div>
+			
+			</div>	</div>
+		</div>
+        </div>
+        
+        
+		
+		
+</form>
+
+<div class="alert alert-warning">
+     <h4>Warning!</h4>
+     The calculations here are for guidence only and you should always check with PayPal of the latest fees they charge! We <strong><u>don't guarantee</u></strong> that these rates are accurate but they will give you a good idea of the maximum fee's you may get charged when receiving PayPal payments in your country.
+    </div>
+<footer>
+		<div class="pull-left">&copy;2012 <a href="http://www.iondigital.co.uk">Website Designer</a> - Ion Digital Limited | All Rights Reserved // Made with <a href ="http://twitter.github.com/bootstrap/index.html">Bootstrap</a> </div>	<div class="pull-right"> <span class='st_facebook_hcount' displayText='Facebook'></span>
+		<span class='st_twitter_hcount' displayText='Tweet'></span>
+		<span class='st_googleplus_hcount' displayText='Google +'></span>
+		<br><br>
+</footer>
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    
+    <script src="calculator.js"></script>
+
+        
+  </body>
+</html>
